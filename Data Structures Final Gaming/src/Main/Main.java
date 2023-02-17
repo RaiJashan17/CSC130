@@ -12,7 +12,7 @@ public class Main{
 	// Fields (Static) below...
 	public static Color custom=new Color(100,40,150);
 	public static Boolean isImageDrawn=false;
-	public static stopWatchX timer=new stopWatchX(250);
+	public static stopWatchX timer=new stopWatchX(50);
 	public static Queue<Vector2D> vecs1=new LinkedList<>();
 	public static Queue<Vector2D> vecs2 = new LinkedList<>();
 	public static Vector2D currentVec = new Vector2D(-100, -100);
@@ -26,8 +26,8 @@ public class Main{
 	
 	/* This is your access to things BEFORE the game loop starts */
 	public static void start(){
-		for(int i=200; i<1000; i+=50){
-			vecs1.add(new Vector2D(i,500));
+		for(int i=-256; i<1336; i+=8){
+			vecs1.add(new Vector2D(i,300));
 		}
 		// TODO: Code your starting conditions here...NOT DRAW CALLS HERE! (no addSprite or drawString)
 		
