@@ -26,7 +26,7 @@ public class Main{
 	
 	/* This is your access to things BEFORE the game loop starts */
 	public static void start(){
-		for(int i=-256; i<1336; i+=8){
+		for(int i=-128; i<1536; i+=8){
 			vecs1.add(new Vector2D(i,300));
 		}
 		// TODO: Code your starting conditions here...NOT DRAW CALLS HERE! (no addSprite or drawString)
