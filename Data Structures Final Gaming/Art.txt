@@ -1,2 +1,6 @@
 Art/f.png*f0
 Art/Rai, Jashan.png*f1
+Art/Frame 1.png*frame1
+Art/Frame 2.png*frame2
+Art/Frame 3.png*frame3
+Art/Frame 4.png*frame4
