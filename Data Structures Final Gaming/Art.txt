@@ -1,6 +1,18 @@
 Art/f.png*f0
 Art/Rai, Jashan.png*f1
 Art/Frame 1.png*frame1
-Art/Frame 2.png*frame2
-Art/Frame 3.png*frame3
-Art/Frame 4.png*frame4
+Art/Frame 2.png*frame2right
+Art/Frame 3.png*frame3right
+Art/Frame 4.png*frame4right
+Art/Grass.png*background
+Art/SleepingBag.png*object1
+Art/Frame 2 Left.png*frame2left
+Art/Frame 3 Left.png*frame3left
+Art/Frame 4 Left.png*frame4left
+Art/Frame 1 Left.png*frame1left
+Art/Frame 2 Up.png*frame2up
+Art/Frame 3 Up.png*frame3up
+Art/Frame 4 Up.png*frame4up
+Art/Frame 2 Down.png*frame2down
+Art/Frame 3 Down.png*frame3down
+Art/Frame 4 Down.png*frame4down

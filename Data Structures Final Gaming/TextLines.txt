@@ -1,0 +1,5 @@
+string1*Stringle Fingle: 'Time to make something sticky'
+string2*Stringle Fingle: 'Time to die, not stick thingy'
+string3*Stringle Fingle: 'Time to sleep, sticky fingley'
+string4*Stringle Fingle: 'Time to follow Mr.Tingley'
+string5*Stringle Fingle: 'Time to hit the dabby wabley'
