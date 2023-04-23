@@ -16,3 +16,21 @@ Art/Frame 4 Up.png*frame4up
 Art/Frame 2 Down.png*frame2down
 Art/Frame 3 Down.png*frame3down
 Art/Frame 4 Down.png*frame4down
+Art/tree.png*Tree
+Art/tree2.png*Treel
+Art/tree2 - Copy.png*Treer
+Art/treeup.png*treeu
+Art/treedown.png*treed
+Art/sprite_updirect0.png*test0up
+Art/sprite_updirect1.png*test1up
+Art/sprite_updirect2.png*test2up
+Art/sprite_updirect3.png*test3up
+Art/sprite_left0.png*testleft0
+Art/sprite_left1.png*testleft1
+Art/sprite_left2.png*testleft2
+Art/sprite_left3.png*testleft3
+Art/sprite_right0.png*testright0
+Art/sprite_right1.png*testright1
+Art/sprite_right2.png*testright2
+Art/sprite_right3.png*testright3
+Art/TestBackground.png*testbackground
