@@ -34,3 +34,5 @@ Art/sprite_right1.png*testright1
 Art/sprite_right2.png*testright2
 Art/sprite_right3.png*testright3
 Art/TestBackground.png*testbackground
+Art/HUDBackground.png*HUDbackground
+Art/Beach Ball.png*BeachBall

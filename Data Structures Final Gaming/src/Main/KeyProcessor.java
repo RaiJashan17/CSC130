@@ -49,8 +49,17 @@ public class KeyProcessor{
 			Main.trigger="u is triggered";
 			break;
 		case '$':
-			if(Main.box1.isCollision(Main.box1, Main.box2)==true){
+			if(Main.box1.isCollision(Main.box1, Main.borders.get(7))==true && Main.box1.directionOfCollision(Main.box1, Main.borders.get(7))=="up"){
 				Main.raw="string3";
+			}
+			if(Main.box1.isCollision(Main.box1, Main.borders.get(3))==true){
+				Main.raw="string1";
+			}
+			if(Main.box1.isCollision(Main.box1, Main.borders.get(4))==true){
+				Main.raw="string2";
+			}
+			if(Main.box1.isCollision(Main.box1, Main.borders.get(6))==true){
+				Main.raw="string4";
 			}
 			break;
 		case 's':

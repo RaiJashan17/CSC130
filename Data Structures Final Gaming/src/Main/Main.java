@@ -24,7 +24,7 @@ public class Main{
 	public static Queue<Vector2D> vecs2 = new LinkedList<>();
 	public static Vector2D currentVec = new Vector2D(500, 250);
 	public static ArrayList<spriteInfo> sprites=new ArrayList<>();
-	public static ArrayList<spriteInfo> spritesBorder=new ArrayList<>();
+	//public static ArrayList<spriteInfo> spritesBorder=new ArrayList<>();
 	public static int currentSpriteIndex=0;
 	public static spriteInfo s1 = new spriteInfo(currentVec, "testright0");
 	public static EZFileRead ezr=new EZFileRead("TextLines.txt");
@@ -39,7 +39,6 @@ public class Main{
 	public static int k=currentVec.getY();
 	public static boolean movement=false;
 	public static BoundingBox box1=new BoundingBox(currentVec.getX(),currentVec.getY(),28,28);
-	public static BoundingBox box2=new BoundingBox(175,450,1,35);
 	public static ArrayList<BoundingBox> borders=new ArrayList<>();
 	//public static String key=st.nextToken();
 	//public static String Value=st.nextToken();
@@ -64,16 +63,24 @@ public class Main{
 			phrases[j]=entry.getKey();
 			j++;
 		}
-			spritesBorder.add(new spriteInfo(new Vector2D(0, 0), "Treel"));
+			/*spritesBorder.add(new spriteInfo(new Vector2D(0, 0), "Treel"));
 			spritesBorder.add(new spriteInfo(new Vector2D(1200,0), "Treer"));
 			spritesBorder.add(new spriteInfo(new Vector2D(80,0), "Treeu"));
-			spritesBorder.add(new spriteInfo(new Vector2D(80,640), "Treed"));
-			for(int i=0;i<spritesBorder.size()/2;i++){
+			spritesBorder.add(new spriteInfo(new Vector2D(80,640), "Treed"));*/
+			borders.add(new BoundingBox(0,575,1280,145));
+			borders.add(new BoundingBox(0,0,84,450));
+			borders.add(new BoundingBox(0,0,1280,110));
+			borders.add(new BoundingBox(825,350,20,175));
+			borders.add(new BoundingBox(1000,210,1,80));
+			borders.add(new BoundingBox(1180,0,140,720));
+			borders.add(new BoundingBox(0,500,35,80));
+			borders.add(new BoundingBox(250,180,80,120));
+		/*	for(int i=0;i<spritesBorder.size()/2;i++){
 				borders.add(new BoundingBox(spritesBorder.get(i).getCoords().getX(),spritesBorder.get(i).getCoords().getY(),50,720));
 			}
 			for(int i=2;i<spritesBorder.size();i++){
 				borders.add(new BoundingBox(spritesBorder.get(i).getCoords().getX(),spritesBorder.get(i).getCoords().getY(),1280,50));
-			}
+			}*/
 			
 		sprites.add(s1);
 		//int i=currentVec.getX();
@@ -99,33 +106,22 @@ public class Main{
 		// TODO: This is where you can code! (Starting code below is just to show you how it works)
 		//ctrl.addSpriteToFrontBuffer(currentVec.getX(), currentVec.getY(), "f1");
 		ctrl.addSpriteToFrontBuffer(0, 0, "testbackground");
-		ctrl.addSpriteToFrontBuffer(100, 400, "object1");
-		ctrl.addSpriteToFrontBuffer(spritesBorder.get(0).getCoords().getX(), spritesBorder.get(0).getCoords().getY(), spritesBorder.get(0).getTag());
-		ctrl.addSpriteToFrontBuffer(spritesBorder.get(1).getCoords().getX(), spritesBorder.get(1).getCoords().getY(), spritesBorder.get(1).getTag());
-		ctrl.addSpriteToFrontBuffer(spritesBorder.get(2).getCoords().getX(), spritesBorder.get(2).getCoords().getY(), spritesBorder.get(2).getTag());
-		ctrl.addSpriteToFrontBuffer(spritesBorder.get(3).getCoords().getX(), spritesBorder.get(3).getCoords().getY(), spritesBorder.get(3).getTag());
+		ctrl.addSpriteToFrontBuffer(-10, 475, "BeachBall");
 		ctrl.addSpriteToFrontBuffer(sprites.get(currentSpriteIndex).getCoords().getX(), sprites.get(currentSpriteIndex).getCoords().getY(), sprites.get(currentSpriteIndex).getTag());
-		ctrl.drawString(100, 100, Integer.toString(currentSpriteIndex), custom);
+		//ctrl.drawString(100, 100, Integer.toString(currentSpriteIndex), custom);
 		if(map.containsKey(raw)){
-			ctrl.drawString(450,200 , map.get(raw), custom);
+			ctrl.addSpriteToFrontBuffer(0, 580, "HUDbackground");
+			ctrl.drawString(150,650 , map.get(raw), Color.BLACK);
 		}
-		ctrl.drawString(600, 20, box1.directionOfCollision(box1, borders.get(0)), custom);
-		ctrl.drawString(600, 40, Boolean.toString(movement), custom);
-		ctrl.drawString(700,20, Integer.toString(box1.getx1()),custom);
-		ctrl.drawString(700,40, Integer.toString(box1.getx2()),custom);
-		ctrl.drawString(800,20, Integer.toString(borders.get(0).getx1()),custom);
-		ctrl.drawString(800, 40, Integer.toString(borders.get(0).getx2()), custom);
-		ctrl.drawString(800,20, Integer.toString(borders.get(0).gety1()),custom);
-		ctrl.drawString(800,20, Integer.toString(borders.get(0).gety2()),custom);
 		//ctrl.drawString(200, 200, map.get("string3"), custom);
 		// Test drawing text on screen where you want (Remove later! Test only!)
 		if(timer.isTimeUp()){
 		box1=new BoundingBox(sprites.get(currentSpriteIndex).getCoords().getX(),sprites.get(currentSpriteIndex).getCoords().getY(),128,128);
-		if(box1.isCollision(box1, box2)==true){
+		/*if(box1.isCollision(box1, box2)==true){
 			if(trigger.equalsIgnoreCase(box1.directionOfCollision(box1, box2))){
 				movement=false;
 			}
-		}
+		}*/
 		for(int i=0;i<borders.size();i++){
 		if(box1.isCollision(box1, borders.get(i))==true){
 			if(trigger.equalsIgnoreCase(box1.directionOfCollision(box1, borders.get(i)))){
